@@ -1,0 +1,211 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+$primarycolor:rgb(0, 255, 0);
+body{
+  background-color:black;
+}
+
+.container{
+
+  color: rgb(175, 164, 164);
+  font-family: 'Courier New', Courier, monospace;
+  .upperSection{
+    input{
+      background-color: rgb(16,16,96);
+      width: 40%;
+      height: 10px;
+      color: white;
+      font-size: 15px;
+      padding: 10px;
+      border-radius: 15px;
+      margin: 5px;
+      margin-left: 15%;
+      &:focus{
+        background-color:rgb(30, 30, 84);
+        color: white;
+      }
+    }
+    button{
+
+      background-color: #00C9C8;
+      display: inline;
+      height: 30px;
+      width: 180px;
+      color: rgb(5, 4, 4);
+      font-size: 15px;
+      border-radius: 15px;
+      margin: 10px;
+      &:hover{
+        background-color:rgb(24, 177, 44);
+        color: white;
+      }
+      
+    }
+  }
+  h1{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+   
+  }
+  .lowersection{
+    
+    display:grid;
+    justify-content: space-evenly;
+    grid-column-gap: 10px;
+      // grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(auto-fit,minmax(320px,1.25fr));
+    h1{
+      display: flex;
+      justify-content: center;
+      font-size: 1.1rem;
+      line-height: 1.5rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      &::after{
+        content: "";
+        border-bottom: 1px solid white;
+        display: inline-block;
+        
+        
+      }
+    }
+    p{
+      font-size: 1rem;
+      text-align: left;
+      font-family:'Times New Roman', Times, serif;
+      line-height: 1.5rem;
+      font-size: 1.01rem;
+      color: rgb(187, 183, 183);
+      word-spacing: 2px;
+      word-wrap:wrap;
+      
+    }
+    .result{
+     
+      border: 1px solid rgb(238, 230, 230);
+    margin: 20px 40px;
+    min-height: 200px;
+    min-width: 250px;  
+      color: white;
+      background-color: rgb(16 , 16, 96);
+      border-radius: 15px;
+      padding: 5px;
+      margin:20px;
+      transition: all 300ms ease-in-out;
+      &:hover{
+        box-shadow: 5px 5px 10px;
+        transform: scale(1.2);
+       
+
+        
+        
+      }
+      .button{
+        text-decoration: none;
+        margin-left: 15%;
+        background-color: #00C9C8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 20px;
+      width: 80%;
+      font-weight: 900;
+      color: rgb(5, 4, 4);
+      font-size: 1.1rem;
+      padding: 10px;
+      border-radius: 15px;
+      margin-bottom: 10px;
+      margin-left:5% ;
+      &:hover{
+        background-color:rgb(24, 177, 44);
+        color: white;
+      }
+      }   
+
+    }
+    
+  }
+}
+
+.logo{
+  position: relative;
+  // background-color: rgb(16, 16, 96);
+  background: linear-gradient(to right,rgb(6, 7, 51), rgb(27, 27, 153));
+  height:15px;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius:15px;
+  margin: 20px 20px;
+  font-size: 1.2rem;
+  h1{
+    position: relative;
+    font-size:20px;
+    &::after{
+      content:"";
+      padding: 2px;
+      border-bottom: 1px solid white;
+      display: block;
+      
+      
+
+    } 
+  
+    
+       
+  }
+  .fstDiv{
+    position: absolute;
+      background-color:$primarycolor;
+      height: 10px;
+      width: 2px ;
+      border-radius: 15px;
+      display: inline;
+      margin-left: 10px;
+      top: -0px;
+      left: 45px;
+      transform: rotate(40deg);
+  }
+  .secDiv{
+    position: absolute;
+      background-color:$primarycolor;
+      height: 20px;
+      width: 2px ;
+      border-radius: 15px;
+      display: inline;
+      margin-left: 10px;
+      top: -0px;
+      left: 47px;
+      transform: rotate(40deg);
+  }
+
+}
+// rsponsive design
+@media (max-width:512px)
+{
+  .upperSection{
+    position: relative;
+   
+    height: 80px;
+    .input{
+      position: absolute;
+      left: 0;
+      
+      width: 100%;
+      background-color:red;
+    }
+    button{
+      
+      left: 30%;
+      top: 35px;
+      position: absolute;
+    }
+    
+  }
+ 
+}
